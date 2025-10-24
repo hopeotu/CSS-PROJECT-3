@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1{
+    font-family: "Limelight", sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.container
+{
+    max-width: 1024px;
+    width: 80%;
+    margin: auto;
+}
+
+.container h1
+{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.container > p
+{
+    text-align: center;
+}
+
+/*--------- gallery section ---------*/
+.gallery
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card-inner
+{
+    position: relative;
+    height: 250px;
+    transition: .5s ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner
+{
+    transform: rotateY(180deg);
+}
+
+.card-font, .card-back
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-font img
+{
+    width: 100%;
+    height: 180%;
+    object-fit: cover;
+}
+
+.card-font
+{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-back
+{
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+.card-back a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* -------- recipe section ---------- */
+.recipe
+{
+margin: 45px 0;
+}
+
+.recipes
+{
+    background-color: #fff;
+    padding: 15px;
+    border-left: 5px solid #000;
+}
+
+
+/*----SECOND PROJECT----*/
+.box
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.boxes
+{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,.5);
+    height: 250px;   
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+    transition: .5s ease;
+
+}
+
+.boxes img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.boxes span{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: "Limelight, sans-serif";
+}
+
+.pop-up
+{
+    background-color: aqua;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.boxes:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 20px rgb(0,0,0,.6);
+}
+
+.boxes:hover .pop-up
+{
+    bottom: 0;
+}
+
